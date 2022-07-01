@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>destination3</title>
+    <style>
+      .div1{
+        display: flex;
+        justify-content: space-between;
+
+      }
+    </style>
+  </head>
+  <body>
+<h1>Summary</h1>
+<div class="container1">
+</div>
+  </body>
+</html>
+
+<script>
+  var bookings=JSON.parse(localStorage.getItem("bookTheRoom"))||[]
+  var container1=document.querySelector(".container1")
+  if(bookings.length==0){
+container1.innerText="You Have No Bookings.Please Book The Room"
+  }else{
+    displayBookings();
+    calculateTotal();
+  }
+function displayBookings(){
+  bookings.map(function(elem){
+    var div1=document.createElement("div")
+    div1.setAttribute("class","div1")
+    var div2=document.createElement("div")
+    var div3=document.createElement("div")
+    div1.append(div2,div3);
+    var image=document.createElement("img")
+    image.setAttribute("src",elem.img_url)
+    image.setAttribute("alt",elem.roomDetail);
+    div2.append(image);
+    var h2=document.createElement("h2")
+    h2.innerText=elem.roomDetail
+    var price=document.createElement("p")
+    price.innerText="₹ "+elem.bookingPrice;
+    div3.append(h2,price)
+    container1.append(div1)
+  })
+}
+function calculateTotal(){
+var total=bookings.reduce(function(acc,curr){
+return acc+JSON.parse(curr.bookingPrice);
+},0)
+console.log(total);
+}
+</script>

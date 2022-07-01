@@ -1,0 +1,117 @@
+.container1 {
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+.container1 > div:first-child {
+  width: 80%;
+  height: 100%;
+}
+.container1 > div:last-child {
+  width: 20%;
+  height: 100%;
+}
+#img1 {
+  width: 100%;
+  height: 100%;
+}
+.container1 > div:last-child > div {
+  width: 100%;
+  height: 33.33%;
+}
+.container1 > div:last-child > div > img {
+  width: 100%;
+  height: 100%;
+}
+/* conatiner2 */
+.container2 {
+  display: flex;
+  height: 335px;
+  width: 100%;
+  justify-content: space-between;
+}
+.container2 > div:first-child {
+  width: 50%;
+  height: 100%;
+}
+ .container2 > div:last-child {
+  width: 50%;
+  height: 100%;
+}
+.container2_2 {
+  display: flex;
+  justify-content: space-between;
+}
+.amenities {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+h1{
+  color: brown;
+}
+.container2 p{
+  font-size: 20px;
+}
+/* container3 */
+.container3 {
+  display: flex;
+  width: 100%;
+  height: 101px;
+  justify-content: space-around;
+}
+.container3 > div:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* container4 */
+.img{
+  width: 20%;
+  height: 100%;
+  border-radius: 20px;
+}
+.img >img{
+  width: 100%;
+  height: 100%;
+}
+.pay{
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.booking{
+  display: flex;
+  width: 100%;
+  height: 200px;
+justify-content: space-between;
+}
+.booking1{
+  width:70%;
+  height: 100%;
+}
+span{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* container5 */
+.container5 p{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#note{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+button{
+  border-radius: 10px;
+  text-align: center;
+  background-color: teal;
+  color: beige;
+  font-size: 20px;
+}
+button:hover{
+  background-color: silver;
+}
+#bookings >a{
+  text-decoration: none;
+  color: white;
+}
+#bookings:hover{
+  background-color: slategray;
+  border-radius: 5px;
+}
